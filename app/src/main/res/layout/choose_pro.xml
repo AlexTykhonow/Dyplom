@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F6DABE">
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="60dp"
+        android:background="#00DA627D"
+        android:src="@drawable/ic_arrow"
+
+        android:layout_height="60dp"
+        />
+    <AutoCompleteTextView
+        android:id="@+id/autoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="0dp"
+        android:layout_margin="10dp"
+        android:hint="Wpisz nazwe programu"/>
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A795EF"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+
+        android:layout_below="@+id/autoTextView"
+        android:layout_margin="10dp"
+        android:text="Wyszukaj" />
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#A795EF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_below="@+id/buttonSearch">
+        <TextView
+            android:id="@+id/view1"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:textColor="#FFFFFF"
+
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="0dp"
+            android:text="Program"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+
+            android:layout_toEndOf="@+id/view1"
+            android:maxWidth="200dp" />
+
+        <TextView
+            android:id="@+id/view3"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="0dp"
+            android:text="Taktowanie"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+
+            android:layout_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/view4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="RAM"
+            android:textColor="#FFFFFF"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/db_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp" />
+</RelativeLayout>
